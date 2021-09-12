@@ -1,0 +1,123 @@
+<!--个人中心页面-->
+
+<!--个人头像卡片部分-->
+
+<view class="myinfo"> 
+  <view class="center_img">
+      <open-data type="userAvatarUrl" class="uers_head"></open-data>
+        </view>
+          <view class="center_info">
+            <open-data type="userNickName" class="center_name"></open-data>
+              <view class="center_name">{{trueName}}</view>    
+      </view>
+</view>
+
+
+<!--功能列表部分--框架代码-->
+<view class='myfunction'>
+<view class="cu-list menu card-menu margin-top">
+  <!--
+    <view class="cu-item arrow">
+      <view class="content"> 
+        <text class="cuIcon-circlefill text-grey"></text>
+        <text class="text-grey">我的猫</text>
+      </view>
+    </view>
+  -->
+
+  <view class="cu-item ">
+      <view class="content">
+        <image src="/pages/pictures/memorandum.png" class="png" mode="aspectFit"></image>
+        <text class="text-grey">我的关注</text>
+      </view>
+      <view class="arrow">
+        <view class='myinjust'>
+      <navigator url="/pages/custOpinions/custOpinions">.</navigator>
+        </view>
+    </view>
+    </view>
+
+
+    <view class="cu-item ">
+      <view class="content">
+        <image src="/pages/pictures/memorandum.png" class="png" mode="aspectFit"></image>
+        <text class="text-grey">我的粉丝</text>
+      </view>
+      <view class="arrow">
+        <view class='myinjust'>
+      <navigator url="/pages/custOpinions/custOpinions">.</navigator>
+        </view>
+    </view>
+    </view>
+
+
+    <view class="cu-item ">
+      <view class="content">
+        <image src="/pages/pictures/mycat.png" class="png" mode="aspectFit"></image>
+        <text class="text-grey">我的猫</text>
+      </view>
+      <view class="arrow">
+        <view class='myinjust'>
+      <navigator url="/pages/custOpinions/custOpinions">.</navigator>
+        </view>
+    </view>
+    </view>
+
+    <view class="cu-item ">
+      <view class="content">
+        <image src="/pages/pictures/memorandum.png" class="png" mode="aspectFit"></image>
+        <text class="text-grey">备忘录</text>
+      </view>
+      <view class="arrow">
+        <view class='myinjust'>
+      <navigator url="/pages/custOpinions/custOpinions">.</navigator>
+        </view>
+    </view>
+    </view>
+
+    <view class="cu-item ">
+      <view class="content">
+        <image src="/pages/pictures/opinion.png" class="png" mode="aspectFit"></image>
+        <text class="text-grey">用户意见反馈</text>
+      </view>
+      <!--<view  class="arrow"></view>-->
+      <view class="arrow">
+        <view class='myinjust'>
+      <navigator url="/pages/custOpinions/custOpinions">.</navigator>
+        </view>
+    </view>
+  </view>
+</view>
+</view>
+
+
+<!--功能列表部分--原生代码-->
+<!--
+<view class="page_list">
+  <view class="list_1">
+    <image class="list_pic" src="/pages/pictures/mycat.png"></image>
+    <view class="list_text">
+      <navigator url="/pages/myCat/myCat">我的猫</navigator>
+    </view>
+    <view  class="arrow"></view>
+  </view> 
+
+  <view class="list_1">
+    <image class="list_pic" src="/pages/pictures/memorandum.png"></image>
+    <view class="list_text">
+      <navigator url="/pages/memorandum/memorandum">备忘录</navigator>
+    </view>
+    <view  class="arrow"></view>
+  </view>
+
+  <view class="list_1">
+    <image class="list_pic" src="/pages/pictures/opinion.png"></image>
+    <view class="list_text">
+      <navigator url="/pages/custOpinions/custOpinions">用户意见反馈</navigator>
+    </view>
+    <view  class="arrow"></view>
+  </view>
+
+</view>
+
+-->

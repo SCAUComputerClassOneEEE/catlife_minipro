@@ -1,0 +1,99 @@
+<!--每日记录板块-->
+
+<!--选择猫咪部分-->
+<view class="cu-bar bg-white margin-top">
+  <view class="action">
+    <text class="cuIcon-title text-orange "></text> 我的所有猫咪
+  </view>
+  <view class="action">     <!--打开按钮-->
+    <button class="cu-btn bg-green shadow" bindtap="showModal" data-target="DrawerModalL">打开</button>
+    
+  </view>
+</view>  
+
+<!--记录部分-->
+<!--标题-->
+<view class='cat-record-bar'>
+<view class="cu-bar bg-white">
+  <view class="action">
+    <text class="cuIcon-title text-green"></text>
+    <text>猫咪记录</text>
+  </view>
+</view>
+</view>
+
+
+<!--记录模块-->
+<view class="daily_down"> 
+<view class="wehx-card_box" wx:for="{{array}}" wx:key="index" data-id="index">  
+	<view class="wehx-flex_top">      	<!--每个小卡片的头部栏：例如：猫咪成长 更多-->
+		<label class="weui-cell__hd wehx-title_blue" bindtap="checkRoles">
+			<checkbox value="{{item.value}}" checked="{{item.checked}}"/>{{item.title}} 
+		</label>
+		<view class="weui-cell__bd right" data-index='{{index}}' catchtap='panel'>
+			<text style="font-size:26rpx;" wx:if="{{item.toggle == true}}">收起</text>		<!--这里是一个条件渲染，当toggle为true时卡片展开，否则卡片为收起状态-->
+			<text style="font-size:26rpx;" wx:else>更多</text>	
+	</view> 
+	</view>	 <!--头部栏结束-->
+
+	<view class="wehx-flex_middle">  <!--这部分是需要记录的猫咪的详细情况，需要设置表单来接受用户输入的数据-->
+		<view class="weui-flex__item weui-flex item-padding">  
+			<view class="wehx-content_title left">身长</view>
+			<view class="wehx-custom_content weui-flex__item right">{{item.date}}</view>
+		</view>
+		<view class="weui-flex__item weui-flex item-padding">
+			<view class="wehx-content_title left">体重</view>
+			<view class="wehx-custom_content weui-flex__item right">{{item.amount}}</view>
+		</view>
+		<block wx:if="{{item.toggle == true}}">     <!--条件渲染：被这个block包括在内的开始都会被隐藏，点击更多会展开-->
+			<view class="weui-flex__item weui-flex item-padding">
+				<view class="wehx-content_title left">是否磨牙</view>
+				<view class="wehx-custom_content weui-flex__item right">{{item.transaction}}</view>
+			</view>
+			<view class="weui-flex__item weui-flex item-padding">
+				<view class="wehx-content_title left">其他</view>
+				<view class="wehx-custom_content weui-flex__item right">{{item.fee}}</view>
+			</view>
+		</block>
+	</view>  
+</view>  
+</view>  
+
+<!--每日记录板块test-->  <!--这里是猫咪卫生test部分-->
+<view class="daily_down"> 
+<view class="wehx-card_box" wx:for="{{array1}}" wx:key="index" data-id="index">
+	<view class="wehx-flex_top"> 
+		<label class="weui-cell__hd wehx-title_blue" bindtap="checkRoles">
+			<checkbox value="{{item.value}}" checked="{{item.checked}}"/>{{item.title}} 
+		</label> 
+		<view class="weui-cell__bd right" data-index='{{index}}' catchtap='panel'>
+			<text style="font-size:26rpx;" wx:if="{{item.toggle == true}}">收起</text>
+			<text style="font-size:26rpx;" wx:else>更多</text>
+			<text class="iconfont iconfont-gray icon-{{item.toggle == true ? 'shangjiantou':'jiantou'}}"></text>
+		</view> 
+	</view> 
+	<view class="wehx-flex_middle">
+		<view class="weui-flex__item weui-flex item-padding">
+			<view class="wehx-content_title left">上次洗澡时间</view>
+			<view class="wehx-custom_content weui-flex__item right">{{item.lastShowTime}}</view>
+		</view>
+
+		 <!--猫咪卫生test部分：从这里开始隐藏（收起）-->
+		<block wx:if="{{item.toggle == true}}">        
+			<view class="weui-flex__item weui-flex item-padding">
+			<view class="wehx-content_title left">上次除虫时间</view>
+			<view class="wehx-custom_content weui-flex__item right">{{item.InsecticidalTime}}</view>
+		</view>
+    
+			<view class="weui-flex__item weui-flex item-padding">
+				<view class="wehx-content_title left">其他</view>
+				<view class="wehx-custom_content weui-flex__item right">{{item.another}}</view>
+			</view> 
+		
+		</block>
+	</view>
+	
+
+</view>
+</view>
+

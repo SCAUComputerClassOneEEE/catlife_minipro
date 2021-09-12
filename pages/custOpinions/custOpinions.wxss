@@ -1,0 +1,118 @@
+/* pages/custOpinions/custOpinions.wxss */
+
+
+page{
+  background: #f7f7f5;
+}
+.wehx-card_box {
+  padding: 0 30rpx;
+  margin:20rpx;
+  background:#ffffff;
+  border-radius:12rpx;
+  box-shadow: 0 0 12rpx 0 rgba(193, 193, 193, 0.50);
+}
+
+/*板块名字部分*/
+.wehx-flex_top{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 95rpx;
+  border-bottom: 1rpx solid #e5e5e5;
+}
+
+
+.wehx-title_blue{
+  color: #2ea7e0;
+  font-size: 30rpx;
+  font-weight: 500;
+}
+
+.weui-cell__hd,.weui-flex__item{
+  flex: 1;
+}
+.wehx-flex_middle {
+  padding: 20rpx 0;
+}
+.wehx-content_title{
+  width: 4.5em;
+  font-size: 24rpx;
+  color: #888888;
+}
+.wehx-custom_content{
+  font-size: 30rpx;
+  text-align: right;
+}
+.weui-flex {
+  display: flex;
+}
+.wehx-flex_middle .item-padding:not(:last-of-type) {
+  padding-bottom: 10rpx;
+}
+
+.iconfont {
+  padding-left: 10rpx;
+  font-size: 24rpx;
+}
+/*checkbox 选项框大小  */
+checkbox .wx-checkbox-input {
+  width: 36rpx;
+  height: 36rpx;
+  border-radius: 50%;
+  border-color: #2ea7e0;
+  vertical-align: middle;
+}
+/*checkbox选中后样式  */
+/*checkbox .wx-checkbox-input.wx-checkbox-input-checked {
+  background:#2ea7e0;
+}*/
+
+/*checkbox选中后图标样式  */
+checkbox .wx-checkbox-input.wx-checkbox-input-checked::before {
+  width: 30rpx;
+  height: 30rpx;
+  line-height: 28rpx;
+  text-align: center;
+  font-size: 22rpx;
+  color: #ffffff;
+  background: transparent;
+  transform: translate(-50%, -50%) scale(1);
+  -webkit-transform: translate(-50%, -50%) scale(1);
+}
+
+/*整个每日记录大板块*/
+.daily_down{
+  margin-top:2px;
+} 
+
+/*猫咪记录标题*/
+.cat-record-bar{
+  margin-top:12px;        /* “猫咪记录”栏相对于 “我的所有猫咪”栏的距离  */
+  background-color: rgb(168, 149, 120);
+}
+
+.cu-form-group .title {
+  min-width: calc(4em + 30rpx);
+}
+
+.from-class{
+  background-color: slateblue;
+}
+
+.newlr{
+  display:flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+
+}
+
+
+.myinput{
+  height:10rpx;
+  width: 131px;
+  margin-right: 10rpx;
+  margin-left: 10rpx;
+  margin-top: 10rpx;
+  border-radius: 7% 7% 7% 7%;
+  
+}

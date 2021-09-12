@@ -1,0 +1,27 @@
+<!--识别后跳出的页面-->
+
+
+<view class="iden">
+  <!--顶部：包括识别率和猫咪头像两部分-->
+  <view class="iden-top">
+    <!--识别率部分-->
+    
+    <text class="top-rate1">{{RecognitionRate}}</text>
+    <text class="top-rate2">为</text>
+    <text class="top-rate3">{{CatType}}</text>
+    <!--猫咪头像部分-->
+    <image class="top-picture" src="../pictures/lihua.jfif"></image>
+  </view>
+
+
+  <!--中部：分界线-->
+  <view class="middle-header-line"></view>
+
+
+  <!--底部：包括猫咪种类信息和猫咪建档按钮-->
+  <view class="iden-down">
+    <view class="iden-down-ifor">此处为信息部分</view>
+    <button type="default" class="iden-dowm-archives" >为猫咪建档</button> 
+  </view>
+  
+</view>

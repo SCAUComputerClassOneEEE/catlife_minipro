@@ -1,0 +1,56 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/test/test",
+    "pages/dailyRecord/dailyRecord",
+    "pages/catSqure/catSqure",
+    "pages/myPage/myPage",
+    "pages/gotoDistinguish/gotoDistinguish",
+    "pages/myCat/myCat",
+    "pages/memorandum/memorandum",
+    "pages/custOpinions/custOpinions",
+    "pages/catIntroduce/catIntroduce",
+    "pages/Identified/Identified",
+    "pages/postDetail/postDetail"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#FFE4E1",
+    "navigationBarTitleText": "Weixin",
+    "navigationBarTextStyle": "black"
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json",
+  "tabBar": {
+    "color": "#a9b7b7",
+    "selectedColor": "#F4A460",
+    "borderStyle": "white",
+    "list": [
+      {
+        "selectedIconPath": "pages/pictures/8.png",
+        "iconPath": "pages/pictures/8.png",
+        "pagePath": "pages/index/index",
+        "text": "探索"
+      },
+      {
+        "selectedIconPath": "pages/pictures/6.png",
+        "iconPath": "pages/pictures/6.png",
+        "pagePath": "pages/dailyRecord/dailyRecord",
+        "text": "每日记录"
+      },
+      {
+        "selectedIconPath": "pages/pictures/3.png",
+        "iconPath": "pages/pictures/3.png",
+        "pagePath": "pages/catSqure/catSqure",
+        "text": "猫圈"
+      },
+      {
+        "selectedIconPath": "pages/pictures/2.png",
+        "iconPath": "pages/pictures/2.png",
+        "pagePath": "pages/myPage/myPage",
+        "text": "个人中心"
+      }
+    ]
+  }
+}

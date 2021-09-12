@@ -1,0 +1,181 @@
+/**index.wxss**/
+.userinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.userinfo-avatar {
+  width: 100rpx;
+  height: 100rpx;
+  margin-top: 10px;
+}
+
+.userinfo-nickname {
+  color: #aaa;
+}
+
+.usermotto {
+  margin-top: 200px;
+}
+
+.container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.say_hello{
+  font-size: 37rpx;
+  font-weight:bold;
+  margin-top:44rpx;
+  margin-left: 35rpx;
+  color: #7a7a7a;
+  align-items: center;
+  
+}
+
+.uer_name{
+  color:#F5DEB3;
+  padding-top: 10px;
+}
+
+.encourage_container{
+  border:1px solid #f0f1a5;
+  width:210rpx;
+  height:80rpx;
+  border-radius:5px;
+  text-align:center;
+  margin-top:200rpx;
+  background-color: rgb(250, 245, 174);
+}
+
+.encourage{
+  font-size:22rpx;
+  font-weight:bold;
+}
+
+.user_avatar{
+  height:80rpx;
+  width:80rpx;
+  margin-top:24rpx;
+  margin-left: 47rpx;
+  border-radius: 19rpx;
+  text-align: center;
+  
+  
+  border-width:4px;
+}
+
+.btn-area{
+  background-color: rgb(248, 229, 190);
+  background-size: 50rpx 50rpx;
+  margin-top:850rpx;
+}
+.jump{
+  color: #5c4a4a;
+}
+
+.topcat{
+  size: 100rpx 100rpx; 
+  display: flex;
+  flex-direction: row;
+  background-color: rgb(250, 250, 250);
+  border-radius:20px;
+  border-style: solid solid solid solid;
+  border-color: rgb(235, 235, 235);
+  size:100rpx 100rpx;
+  margin-top: 17px;
+  width: 50%;
+  height: 48px;
+  margin-left: 65px;
+}
+
+
+/**悬浮按钮**/
+.add_icon{
+  position: fixed;
+  width:80px;
+  height:90px;
+  top: 380px;
+  left:230px;
+  
+}
+
+/*猫展示模块*/
+.center{
+  width:90%;
+  height: 270px;
+  background: rgb(255, 249, 249);
+  display: flex;
+  flex-direction: column;
+  border-radius:5px;
+  margin-top:30px;
+  margin-left: 40rpx;
+  border-style: none solid solid none;
+  border-width: 6px;
+  border-color: rgb(231, 229, 229);
+}
+
+.center_1{
+  display: flex;
+  flex-direction: row;
+  margin-left: 20px;
+} 
+
+.center_2{
+  display: flex;
+  flex-direction: column;
+  margin-left: 20rpx;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
+
+/*猫展示模块的图片*/
+.center_img{
+  border-radius: 50%;
+  height:60px;
+  width: 60px;
+  border-style: none solid solid none;
+  border-color: rgb(207, 207, 207);
+  border-width: 10rpx;
+}
+
+/*猫展示模块的文本*/
+.center_text{
+  font-size:30rpx;
+  background:rgb(233, 233, 229);
+  border-radius: 5px;
+  margin-top: 4px;
+}
+
+/*选择图片按钮的样式*/
+.selectPhoto{   
+  width: 45%;
+  margin-left: 82px;
+  margin-top:13px;
+}
+
+
+/*猫展示部分--框架代码的css样式*/
+.cat-display{
+  margin-top: 10px;
+  opacity: 0.9;     /*调节透明度*/
+  background-color: rgb(252, 242, 230);
+}
+
+
+/*列表宫格--框架代码整体的css样式*/
+.cat-list{
+  margin-top: 4px;
+  opacity: 0.9;     /*调节透明度*/
+}
+
+
+/*标题条样式*/
+.cat-bar{
+  margin-top:22px;
+  background: rgb(255, 255, 255);
+  opacity: 0.9;       /*调节透明度*/
+}
