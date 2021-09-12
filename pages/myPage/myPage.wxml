@@ -58,7 +58,7 @@
     <view class="cu-item ">
       <view class="content">
         <image src="/pages/pictures/memorandum.png" class="png" mode="aspectFit"></image>
-        <text class="text-grey">备忘录</text>
+        <text class="text-grey">我的备忘录</text>
       </view>
       <view class="arrow">
         <view class='myinjust'>
