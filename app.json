@@ -12,7 +12,10 @@
     "pages/custOpinions/custOpinions",
     "pages/catIntroduce/catIntroduce",
     "pages/Identified/Identified",
-    "pages/postDetail/postDetail"
+    "pages/postDetail/postDetail",
+    "pages/catIntroduce/intro1/intro1",
+    "pages/myPage/myFan/myFan",
+    "pages/myPage/myFollow/myFollow"
   ],
   "window": {
     "backgroundTextStyle": "light",

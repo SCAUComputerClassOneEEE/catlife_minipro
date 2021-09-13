@@ -1,0 +1,45 @@
+<!--pages/myPage/myFan/myFan.wxml-->
+
+
+<view class="cu-card dynamic {{isCard?'no-card':''}}"> 
+  <view class="cu-item shadow">
+    <view class="cu-list menu-avatar">        
+   <text class="top-text">我的所有粉丝</text>      
+    </view>
+  </view>
+</view>
+
+
+
+
+<!--我的粉丝列表（原生代码）-->
+<view class="board">
+  <image class="follow-img" src="../../pictures/abyssinian_l2.jpg"></image>
+  <view class="follow-text">拔丝芋头真好吃</view>
+</view>
+
+<view class="board">
+  <image class="follow-img" src="../../pictures/abyssinian_l2.jpg"></image>
+  <view class="follow-text">拔丝芋头真好吃</view>
+</view>
+
+<view class="board">
+  <image class="follow-img" src="../../pictures/abyssinian_l2.jpg"></image>
+  <view class="follow-text">拔丝芋头真好吃</view>
+</view>
+
+<view class="board">
+  <image class="follow-img" src="../../pictures/abyssinian_l2.jpg"></image>
+  <view class="follow-text">拔丝芋头真好吃</view>
+</view>
+
+<view class="board">
+  <image class="follow-img" src="../../pictures/abyssinian_l2.jpg"></image>
+  <view class="follow-text">拔丝芋头真好吃</view>
+</view>
+
+<view class="board">
+  <image class="follow-img" src="../../pictures/abyssinian_l2.jpg"></image>
+  <view class="follow-text">拔丝芋头真好吃</view>
+</view>
+

@@ -1,0 +1,104 @@
+<!--pages/myPage/myFollow/myFollow.wxml-->
+
+
+
+<view class="cu-card dynamic {{isCard?'no-card':''}}"> 
+  <view class="cu-item shadow">
+    <view class="cu-list menu-avatar">        
+   <text class="top-text">我的所有关注</text>      
+    </view>
+  </view>
+</view>
+
+
+<!--我的关注列表（原生代码）-->
+<view class="board">
+  <image class="follow-img" src="../../pictures/abyssinian_l2.jpg"></image>
+  <view class="follow-text">拔丝芋头真好吃</view>
+  <image class="check" src="../../pictures/icon/check.png" bindtap="showModal" data-target="DialogModal1"></image>
+
+<view class="cu-modal {{modalName=='DialogModal1'?'show':''}}">
+  <view class="cu-dialog">
+    <view class="cu-bar bg-white justify-end">
+      <view class="content">取消关注</view>
+      <view class="action" bindtap="hideModal">
+        <text class="cuIcon-close text-red"></text>
+      </view>
+    </view>
+    <view class="padding-xl">
+      确定不再关注 拔丝芋头真好吃
+    </view>
+    <view class="cu-bar bg-white justify-end">
+      <view class="action">
+        <button class="cu-btn line-green text-green" bindtap="hideModal">返回</button>
+        <button class="cu-btn bg-green margin-left" bindtap="hideModal">取消关注</button>
+
+      </view>
+    </view>
+  </view>
+</view>
+
+</view>
+
+<view class="board">
+  <image class="follow-img" src="../../pictures/abyssinian_l2.jpg"></image>
+  <view class="follow-text">拔丝芋头真好吃</view>
+  <image class="check" src="../../pictures/icon/check.png" bindtap="showModal" data-target="DialogModal1"></image>
+
+<view class="cu-modal {{modalName=='DialogModal1'?'show':''}}">
+  <view class="cu-dialog">
+    <view class="cu-bar bg-white justify-end">
+      <view class="content">取消关注</view>
+      <view class="action" bindtap="hideModal">
+        <text class="cuIcon-close text-red"></text>
+      </view>
+    </view>
+    <view class="padding-xl">
+      确定不再关注 拔丝芋头真好吃
+    </view>
+    <view class="cu-bar bg-white justify-end">
+      <view class="action">
+        <button class="cu-btn line-green text-green" bindtap="hideModal">返回</button>
+        <button class="cu-btn bg-green margin-left" bindtap="hideModal">取消关注</button>
+
+      </view>
+    </view>
+  </view>
+</view>
+
+</view>
+
+<!--数据绑定：用数组渲染到页面上-->
+<block wx:for="{{followList}}" wx:for-item="item" wx:for-index="idx">
+<view class="board">
+  <image class="follow-img" src="{{item.headPortrait}}"></image>
+  <view class="follow-text">{{item.userName}}</view>
+  <view class="check-all">
+  <image class="check" src="../../pictures/icon/check.png" bindtap="showModal" data-target="DialogModal1"></image>
+</view>
+
+<view class="cu-modal {{modalName=='DialogModal1'?'show':''}}">
+  <view class="cu-dialog">
+    <view class="cu-bar bg-white justify-end">
+      <view class="content">取消关注</view>
+      <view class="action" bindtap="hideModal">
+        <text class="cuIcon-close text-red"></text>
+      </view>
+    </view>
+    <view class="padding-xl">
+      确定不再关注 {{item.userName}}
+    </view>
+    <view class="cu-bar bg-white justify-end">
+      <view class="action">
+        <button class="cu-btn line-green text-green" bindtap="hideModal">返回</button>
+        <button class="cu-btn bg-green margin-left" bindtap="hideModal">取消关注</button>
+
+      </view>
+    </view>
+  </view>
+</view>
+
+</view>
+</block>
+
+

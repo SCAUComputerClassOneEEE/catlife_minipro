@@ -1,0 +1,42 @@
+<!--了解更多种类猫咪详情页面1-->
+
+
+<!--顶部卡片-->
+<view class="top">
+  <image class="top-picture" src="../../pictures/havana.jpg"></image>
+  <text class="top-text">美国短毛猫</text>
+</view>
+
+<!--分界线-->
+<view class="middle-header-line"></view>
+
+
+<view class="midddle-1">
+  <view class="head-text">猫咪简介</view>
+  <view class="middle-header-line"></view>
+  <view class="main-text">“ 美国短毛猫素以体格魁伟，骨骼粗壮，肌肉发达，生性聪明，性格温顺著称，是短毛猫类中大型品种。被毛厚密，毛色多达30种，其中以银色条纹品种最为名贵。”</view>
+  
+</view>
+
+
+
+<view class="midddle-2">
+  <view class="head-text">形态特征</view>
+  <view class="middle-header-line"></view>
+  <view class="main-text">“ 这种猫身强体壮，身体从中型到大型都有，脑袋呈长方形，脖子粗壮，胸部浑圆。脊背平直，四肢发达，擅长跳跃。它的被毛柔软，厚实，但很短；其皮可以防寒、防雨，并防外伤，仿佛是一种短而厚的稠密外套。毛色有白、黑、斑纹等30余种。其中最受欢迎的，尤其是东方，是一种在银白色的体毛间嵌有鲜黑色条纹的银白虎纹猫。”</view>
+  
+</view>
+
+<view class="midddle-2">
+  <view class="head-text">性格特征</view>
+  <view class="middle-header-line"></view>
+  <view class="main-text">“ 美国短毛猫吃苦耐劳、坚强勇敢、性格温和。它们很有耐性，顺服可爱，从来不会乱发脾气，也不喜欢胡乱吵叫，所以，十分适合有小孩子的家庭饲养。自身的抵抗力较强。同样，美国短毛猫也是一种十分聪明的猫，对于主人的训练往往十分配合。一只居家的美国短毛猫很喜欢享受主人的爱抚。对于自己的玩具也十分珍惜，而且会发明多种不同的玩法，使自己的生活充满乐趣。”</view>
+</view>
+
+
+<view class="midddle-2">
+  <view class="head-text">生活习性</view>
+  <view class="middle-header-line"></view>
+  <view class="main-text">“ 这种猫比较恋家，对主人十分依恋，喜欢同儿童玩耍，善于捕鼠，适应性很强，可以在任何家庭中生活能够灵活地迎合主人的心意，调整自身的习性来适应主人的习惯。捕鼠的技巧是第一流的，为不可多得的捕鼠好手。”</view>
+
+</view>
