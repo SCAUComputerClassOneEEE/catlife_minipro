@@ -15,6 +15,7 @@ Page({
     gridCol:3,        //列表宫格框架代码data
     skin: false,      //列表宫格框架代码data
 
+   
 
     swiperList: [{     //轮播框架代码swiperList数组
       id: 0,
@@ -48,58 +49,61 @@ Page({
 
 
     //以下是列表宫格代码框架的数组
-    iconList: [{
-      icon: 'cardboardfill',
-      color: 'red',
-      badge: 0,                   //控制图标右上角消息数量
-      name: '美国短毛猫'
+    catList: [{
+      name: '美国短毛猫',
+      img:"../pictures/tonkinese.jpg"
     }, {
-      icon: 'recordfill',
-      color: 'orange',
-      badge: 0,
-      name: '狸花猫'
+      name: '狸花猫',
+      img:"../pictures/havana.jpg"
     }, {
-      icon: 'picfill',
-      color: 'yellow',
-      badge: 0,
-      name: '无毛猫'
+      name: '无毛猫',
+      img:"../pictures/Turkish Van.2.jpg"
     }, {
-      icon: 'noticefill',
-      color: 'olive',
-      badge: 0,
-      name: '挪威森林猫'
+      name: '挪威森林猫',
+      img:"../pictures/havana.jpg"
     }, {
-      icon: 'upstagefill',
-      color: 'cyan',
-      badge: 0,
-      name: '孟买猫'
+      name: '孟买猫',
+      img:"../pictures/havana.jpg"
     }, {
-      icon: 'clothesfill',
-      color: 'blue',
-      badge: 0,
-      name: '土耳其猫'
+      name: '土耳其猫',
+      img:"../pictures/havana.jpg"
+    },{
+      name: '孟买猫',
+      img:"../pictures/havana.jpg"
     }, {
-      icon: 'discoverfill',
-      color: 'purple',
-      badge: 0,
-      name: '发现'
+      name: '孟买猫',
+      img:"../pictures/havana.jpg"
     }, {
-      icon: 'questionfill',
-      color: 'mauve',
-      badge: 0,
-      name: '帮助'
-    }, {
-      icon: 'commandfill',
-      color: 'purple',
-      badge: 0,
-      name: '问答'
-    }, {
-      icon: 'brandfill',
-      color: 'mauve',
-      badge: 0,
-      name: '版权'
-    }],
+      name: '孟买猫',
+      img:"../pictures/havana.jpg"
+    }
+    ],
+
+    array: [{
+      toggle: false,
+    }]
+
+  
   },
+
+
+  
+  //猫咪热榜 折叠面板
+  panel: function (e) {
+    //获取到元素的id值
+    var id = e.currentTarget.dataset.index;
+    //获取到全部数据
+    var items = this.data.array;
+    //获取到当前元素的显示与隐藏
+    //var ishow = !items[id].toggle;
+    //将新的toggle值复制给原来的toggle
+    items[id].toggle = !items[id].toggle;
+    this.setData({
+      array: items
+    })
+  },
+
+
 
 
   // 事件处理函数
@@ -145,15 +149,7 @@ Page({
     })
   },
 
-  //右下悬浮按钮
-  adddetail:function(){
-    wx.switchTab({
-      url: '/pages/gotoDistinguish/gotoDistinguish',
-      success:function(res){},
-      fail:function(res){},
-      complete:function(res){}
-    })
-  },
+
 
   //选择图片
   selectPhotoTap:function(){
@@ -316,9 +312,54 @@ Page({
     this.setData({
       ListTouchDirection: null
     })
+  },
+
+
+   //事件：点击猫咪宫格跳转到猫咪详情介绍页面
+   onTapToDetail0(event){
+    console.log("发生点击事件");
+    wx.navigateTo({
+      url: '../catIntroduce/intro1/intro1',
+    })
+  },
+
+  onTapToDetail1(event){
+    wx.navigateTo({
+      url: '../Identified/Identified',
+    })
+  },
+
+  onTapToDetail2(event){
+    wx.navigateTo({
+      url: '../Identified/Identified',
+    })
+  },
+
+  onTapToDetail3(event){
+    wx.navigateTo({
+      url: '../Identified/Identified',
+    })
+  },
+
+  onTapToDetail4(event){
+    wx.navigateTo({
+      url: '../Identified/Identified',
+    })
+  },
+
+  onTapToDetail5(event){
+    wx.navigateTo({
+      url: '../Identified/Identified',
+    })
+  },
+
+  onTapToDetail6(event){
+    wx.navigateTo({
+      url: '../Identified/Identified',
+    })
   }
 
 })
 
 
-//以下是框架的js代码
+

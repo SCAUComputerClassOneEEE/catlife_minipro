@@ -1,56 +1,21 @@
 <!--探索页面-->
 
-
-<!--<view class="topcat" style="height:300rpx weight100rpx"><image src='/pages/pictures/camera.png' class='user_avatar' ></image><text class='say_hello'>识别我的猫</text></view>-->
-
 <!--选择照片按钮,被注释掉的是原生代码，现在的是框架-->
 <!--<view class='selectPhoto'>              
 <button type='default' bindtap='selectPhotoTap'>选择照片</button>
 </view>-->
-<view class="margin-tb-sm text-center">
-  <button class="cu-btn round bg-white shadow" role="button" aria-disabled="false" bindtap="selectPhotoTap">选择照片</button>
+
+
+<!--识别猫咪栏-->
+<view class=" index-top"> 
+  <image class="camera-img" src="../pictures/index/camera-8.png"> </image>
+  <text class="index-text">识别我的猫咪</text>
+  <button class="cu-btn round bg-white shadow index-button selectPhoto" aria-disabled="false" bindtap="selectPhotoTap">选择照片</button>
 </view>
 
 
-<!--猫展示模块-->
-<!-- 以下注释掉的部分是原生代码哦
-<view class="center">
-  <view class="center_1">
 
-    <view class="center_2">
-      <image class="center_img" src="/pages/pictures/abyssinian_l2.jpg"></image>
-      <text class="center_text">Abyssinian</text>
-    </view>
-
-    <view class="center_2">
-      <image class="center_img" src="/pages/pictures/americanShor.jpg"></image>
-      <text class="center_text">美国短毛猫</text>
-    </view>
-
-    <view class="center_2">
-      <image class="center_img" src="/pages/pictures/Beautiful-Bombay-Cat-Face.jpg"></image>
-      <text class="center_text">Bombay</text>
-    </view>
-  </view>
-
-  <view class="center_1">
-    <view class="center_2">
-      <image class="center_img" src="/pages/pictures/egyptian-mau-cat-facts4.jpg"></image>
-      <text class="center_text">EgyptianMau</text>
-    </view>
-
-    <view class="center_2">
-      <image class="center_img" src="/pages/pictures/havana.jpg"></image>
-      <text class="center_text">Havana</text>
-    </view>
-
-    <view class="center_2">
-      <image class="center_img" src="/pages/pictures/lihua.jfif"></image>
-      <text class="center_text">Lihua</text>
-    </view>
-  </view>
-</view>
--->
+<!--猫咪展示模块-->
 <view class='cat-display'>
 <swiper class="card-swiper {{DotStyle?'square-dot':'round-dot'}}" indicator-dots="true" circular="true" autoplay="true" interval="5000" duration="500" bindchange="cardSwiper" indicator-color="#8799a3" indicator-active-color="#0081ff">
   <swiper-item wx:for="{{swiperList}}" wx:key class="{{cardCur==index?'cur':''}}">
@@ -63,20 +28,65 @@
 </view>
 <!--猫展示模块结束-->
 
-<!--标题条-->
+
+
+
+<!--猫咪热搜榜--> <!--展开面板-->
+<!--顶部标题栏-->
+<view class="cat-hot">
+<view class="wehx-card_box" wx:for="{{array}}" wx:key="index" data-id="index">
+	<view class="wehx-flex_top">
+		<label class="weui-cell__hd wehx-title_blue" >
+			猫咪热榜
+		</label>
+		<view class="weui-cell__bd right"  data-index='{{index}}'  catchtap='panel'>
+			<text style="font-size:26rpx;" wx:if="{{item.toggle == true}}">收起</text>
+			<text style="font-size:26rpx;" wx:else>更多</text>			
+		</view>
+	</view>
+
+  
+<!--内部猫咪榜单-->
+	<view class="wehx-flex_middle">
+
+<van-cell title="" value="" label="1. 美国短毛猫" icon="medal-o"></van-cell>
+<van-cell title="" value="" label="2.狸花猫" icon="medal-o" />
+<van-cell title="" value="" label="3.无毛猫" icon="medal-o" />
+
+<block wx:if="{{item.toggle == true}}">    <!--被这个block包括的部分都默认收起-->
+  <van-cell title="" value="" label="4.挪威森林猫" icon="bookmark-o" />
+  <van-cell title="" value="" label="5.挪威森林猫" icon="bookmark-o" />
+  <van-cell title="" value="" label="6.挪威森林猫" icon="bookmark-o" />
+  <van-cell title="" value="" label="7.挪威森林猫" icon="bookmark-o" />
+  <van-cell title="" value="" label="8.挪威森林猫" icon="bookmark-o" />
+  <van-cell title="" value="" label="9.挪威森林猫" icon="bookmark-o" />
+  <van-cell title="" value="" label="10.挪威森林猫" icon="bookmark-o" />
+
+
+</block>
+
+</view>
+
+</view>
+</view>
+
+
+
+<!--标题条：了解更多种类猫咪-->
 <view class='cat-bar'>
 <view class="cu-bar bg-white">
   <view class="action">
     <text class="cuIcon-title text-green"></text>
-    <text>了解更多种类猫猫</text>
+    <text>了解更多种类猫咪</text>
   </view>
 </view>
 </view>
 
-<!--框架代码:宫格列表-->
+
+<!--框架代码:宫格列表，展示多个种类的猫咪-->
 <view class='cat-list'>
-<view class="cu-list grid col-{{gridCol}} {{gridBorder?'':'border'}}">      <!--是否有边框-->
-    <view class="cu-item" wx:for="{{iconList}}" wx:key wx:if="{{index<gridCol*2}}">   <!--数组渲染到宫格里-->
+<view class="cu-list grid col-{{gridCol}} {{gridBorder?'':'border'}}">        <!--是否有边框-->
+    <view class="cu-item" wx:for="{{iconList}}" wx:key wx:if="{{index<gridCol*2}}">    <!--数组渲染到宫格里-->
       <view class="cuIcon-{{item.icon}} text-{{item.color}}">
         <view class="cu-tag badge" wx:if="{{item.badge!=0}}">
           <block wx:if="{{item.badge!=1}}">{{item.badge>99?"99+":item.badge}}</block>
@@ -88,17 +98,22 @@
 </view>
 
 
-<!--最底部页面跳转测试-->
-<view class="btn-area">
-<navigator url="pages/Identified/Identified" hover-class="navigator-hover" class="jump">点击进入test页面</navigator>
-</view>
-
-<!--右下固定按钮-->
-<view bindtap="adddetial">
-  <image class="add_icon" src="/pages/pictures/4.png"></image>
-  </view>
-
-<!--选择图片按钮测试：选择完按钮用wx:for把图片渲染出来-->
+<!--选择图片按钮测试部分：选择完按钮用wx:for把图片渲染出来-->
 <view class='section' wx:for="{{sources}}" wx:key="{{index}}">
   <image src="{{item}}"></image>
 </view>
+
+
+
+
+<!--宫格列表-->
+
+<view class='user-box' style="margin-top:20rpx;">
+    <view class='ctn cuin'>
+      <view class='list' wx:for="{{catList}}" wx:key data-index="{{index}}" style="width:33.33%;" bindtap="onTapToDetail{{index}}">
+        <image class="imgIcon" mode="widthFix" src='{{item.img}}'></image> 
+        <text class="cat-text">{{item.name}}</text>
+      </view>
+    </view>
+</view>
+

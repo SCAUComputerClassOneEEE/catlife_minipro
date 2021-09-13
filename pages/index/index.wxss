@@ -72,6 +72,7 @@
   background-size: 50rpx 50rpx;
   margin-top:850rpx;
 }
+
 .jump{
   color: #5c4a4a;
 }
@@ -91,16 +92,6 @@
   margin-left: 65px;
 }
 
-
-/**悬浮按钮**/
-.add_icon{
-  position: fixed;
-  width:80px;
-  height:90px;
-  top: 380px;
-  left:230px;
-  
-}
 
 /*猫展示模块*/
 .center{
@@ -152,7 +143,7 @@
 
 /*选择图片按钮的样式*/
 .selectPhoto{   
-  width: 45%;
+  width: 15%;
   margin-left: 82px;
   margin-top:13px;
 }
@@ -162,7 +153,7 @@
 .cat-display{
   margin-top: 10px;
   opacity: 0.9;     /*调节透明度*/
-  background-color: rgb(252, 242, 230);
+  background-color: rgb(252, 245, 238);
 }
 
 
@@ -178,4 +169,222 @@
   margin-top:22px;
   background: rgb(255, 255, 255);
   opacity: 0.9;       /*调节透明度*/
+}
+
+
+/*选择猫咪识别图片区域样式*/
+.index-top{
+  background-color:#FFE4E1;       /*设置该区域背景颜色和顶部栏一致*/
+  height:120rpx;
+  display: flex;
+  flex-direction: row;
+  
+}
+
+
+/*选择图片按钮样式*/
+.index-button{
+  width:80%;
+  height:60rpx;
+  margin-top: 15rpx;
+  margin-left: 30rpx;
+}
+
+/*识别猫咪区域相机图片*/
+.camera-img{
+  width:90rpx;
+  height:90rpx;
+  margin-top:5rpx;
+  margin-left: 30rpx;
+}
+
+.index-text{
+  font-size:32rpx;
+  color:rgb(126, 116, 113);
+  margin-top: 33rpx;
+  font-family:'"Microsoft YaHei"';
+  font-weight: bold;
+  margin-left: 10px;
+}
+
+
+/*宫格列表*/
+
+page{
+  background-color: #f7f7f7;
+}
+view{
+  box-sizing: border-box;
+}
+.user-box{ width: 100%;float: left;overflow: hidden;background-color: #fff; }
+.user-box .ctn{ display: flex;justify-content:flex-start;align-items: center;flex-wrap:wrap;}
+.user-box .ctn .list{ text-align: center; width: 25%; padding:20rpx 0 20rpx 0; position: relative;}
+.user-box .ctn .list image{ width: 50rpx; height: auto;}
+.user-box .ctn .list text{ display: block; font-size: 24rpx; padding-top: 10rpx;} 
+.user-box .ctn .list view{font-size: 16rpx;color: #ccc;position: relative;top: 4rpx;}
+
+
+/*设置九宫格的边框线条*/
+.cuin view:nth-child(9){
+  border-right: 1px solid #ddd;
+  border-top: 1px solid #ddd;
+}
+
+.cuin view:nth-child(8){
+  border-right: 1px solid #ddd;
+  border-top: 1px solid #ddd;
+}
+
+.cuin view:nth-child(7){
+  border-right: 1px solid #ddd;
+  border-top: 1px solid #ddd;
+}
+
+.cuin view:nth-child(6){
+  border-top: 1px solid #ddd;
+}
+.cuin view:nth-child(5){
+  border-right: 1px solid #ddd;
+  border-top: 1px solid #ddd;
+}
+.cuin view:nth-child(4){
+  border-right: 1px solid #ddd;
+  border-top: 1px solid #ddd;
+  position: relative;
+}
+.cuin view:nth-child(2){
+  border-right: 1px solid #ddd;
+}
+.cuin view:nth-child(1){
+  border-right: 1px solid #ddd;
+}
+
+.user-span{
+  font-size: 18rpx;
+  height: 28rpx;
+  display: flex;
+  align-items: center;
+  background-color: #e54d42;
+  color: #fff;
+  padding: 0 8rpx 4rpx 10rpx;
+  border-radius: 200rpx;
+  position: absolute;
+  top: 10rpx;
+  right: 20rpx;
+}
+
+
+/*宫格列表*/
+.imgIcon{
+  border-radius: 50%;
+  
+}
+
+.cat-text{
+  color:rgb(153, 147, 147);
+}
+
+
+
+
+/*猫咪热搜榜*/
+
+.wehx-card_box {
+  padding: 0 70rpx;
+  margin:20rpx;
+  background:#ffffff;
+  border-radius:12rpx;
+  box-shadow: 0 0 12rpx 0 rgba(193, 193, 193, 0.50);
+  align-items: center;
+  background-image: "../pictures/cat1.jfif";
+  
+}
+.wehx-flex_top{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 95rpx;
+  border-bottom: 1rpx solid #e5e5e5;
+}
+.wehx-title_blue{
+  color: #2ea7e0;
+  font-size: 30rpx;
+  font-weight: 500;
+}
+.weui-cell__hd,.weui-flex__item{
+  flex: 1;
+}
+.wehx-flex_middle {
+  padding: 20rpx 0;
+}
+.wehx-content_title{
+  width: 4.5em;
+  font-size: 24rpx;
+  color: #888888;
+}
+.wehx-custom_content{
+  font-size: 30rpx;
+  text-align: right;
+}
+.weui-flex {
+  display: flex;
+}
+.wehx-flex_middle .item-padding:not(:last-of-type) {
+  padding-bottom: 10rpx;
+}
+
+.iconfont {
+  padding-left: 10rpx;
+  font-size: 24rpx;
+}
+
+/*checkbox 选项框大小  */
+checkbox .wx-checkbox-input {
+  width: 36rpx;
+  height: 36rpx;
+  border-radius: 50%;
+  border-color: #2ea7e0;
+  vertical-align: middle;
+}
+/*checkbox选中后样式  */
+checkbox .wx-checkbox-input.wx-checkbox-input-checked {
+  background:#2ea7e0;
+}
+/*checkbox选中后图标样式  */
+checkbox .wx-checkbox-input.wx-checkbox-input-checked::before {
+  width: 30rpx;
+  height: 30rpx;
+  line-height: 28rpx;
+  text-align: center;
+  font-size: 22rpx;
+  color: #ffffff;
+  background: transparent;
+  transform: translate(-50%, -50%) scale(1);
+  -webkit-transform: translate(-50%, -50%) scale(1);
+}
+
+
+
+
+/*猫咪热榜*/
+.cat-hot{
+  margin-top: 20px;
+  align-items: center;
+}
+
+
+/*用来限制按钮大小*/
+.buttonsize{
+  width: 10px;
+  margin-left: 40px;
+}
+
+
+
+
+
+
+.index-test{
+  display: flex;
+  flex-direction: row;
 }
