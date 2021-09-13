@@ -16,71 +16,56 @@
 <!--功能列表部分--框架代码-->
 <view class='myfunction'>
 <view class="cu-list menu card-menu margin-top">
+  <!--
+    <view class="cu-item arrow">
+      <view class="content"> 
+        <text class="cuIcon-circlefill text-grey"></text>
+        <text class="text-grey">我的猫</text>
+      </view>
+    </view>
+  -->
 
-  <view class="cu-item ">
+  <view class="cu-item " catchtap="gotoDetailFollow">
       <view class="content">
         <image src="/pages/pictures/memorandum.png" class="png" mode="aspectFit"></image>
         <text class="text-grey">我的关注</text>
       </view>
-      <view class="arrow">
-        <view class='myinjust'>
-      <navigator url="/pages/custOpinions/custOpinions">.</navigator>
-        </view>
-    </view>
+      <view class="arrow"></view>
     </view>
 
 
-    <view class="cu-item ">
+    <view class="cu-item " catchtap="gotoDetailFan">
       <view class="content">
         <image src="/pages/pictures/memorandum.png" class="png" mode="aspectFit"></image>
         <text class="text-grey">我的粉丝</text>
       </view>
-      <view class="arrow">
-        <view class='myinjust'>
-      <navigator url="/pages/custOpinions/custOpinions">.</navigator>
-        </view>
-    </view>
+      <view class="arrow"></view>
     </view>
 
 
-    <view class="cu-item ">
+    <view class="cu-item " catchtap="gotoDetailMyCat">
       <view class="content">
         <image src="/pages/pictures/mycat.png" class="png" mode="aspectFit"></image>
         <text class="text-grey">我的猫</text>
       </view>
-      <view class="arrow">
-        <view class='myinjust'>
-      <navigator url="/pages/custOpinions/custOpinions">.</navigator>
-        </view>
-    </view>
+      <view class="arrow"></view>
     </view>
 
-    <view class="cu-item ">
+    <view class="cu-item" catchtap="gotoDetailMemorandum">
       <view class="content">
         <image src="/pages/pictures/memorandum.png" class="png" mode="aspectFit"></image>
-        <text class="text-grey">我的备忘录</text>
+        <text class="text-grey">备忘录</text>
       </view>
-      <view class="arrow">
-        <view class='myinjust'>
-      <navigator url="/pages/custOpinions/custOpinions">.</navigator>
-        </view>
-    </view>
+      <view class="arrow"></view>
     </view>
 
-    <view class="cu-item ">
+    <view class="cu-item" catchtap="gotoDetailCustOpinion">
       <view class="content">
         <image src="/pages/pictures/opinion.png" class="png" mode="aspectFit"></image>
         <text class="text-grey">用户意见反馈</text>
       </view>
       <!--<view  class="arrow"></view>-->
-      <view class="arrow">
-        <view class='myinjust'>
-      <navigator url="/pages/custOpinions/custOpinions">.</navigator>
-        </view>
-    </view>
+      <view class="arrow"></view> 
   </view>
 </view>
 </view>
-
-
-

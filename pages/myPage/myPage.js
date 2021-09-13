@@ -8,6 +8,42 @@ Page({
 
   },
 
+
+
+  /*具体页面跳转*/ 
+  gotoDetailFollow(event){
+    wx.navigateTo({
+      url: "/pages/myPage/myFollow/myFollow"
+    })
+  },
+
+  gotoDetailFan(event){
+    wx.navigateTo({
+      url: "/pages/myPage/myFan/myFan"
+    })
+  },
+
+  gotoDetailMyCat(event){
+    wx.navigateTo({
+      url: "/pages/custOpinions/custOpinions"
+    })
+  },
+
+  gotoDetailMemorandum(event){
+    wx.navigateTo({
+      url: "/pages/custOpinions/custOpinions"
+    })
+  },
+
+  gotoDetailCustOpinion(event){
+    wx.navigateTo({
+      url: "/pages/custOpinions/custOpinions"
+    })
+  },
+
+
+
+
   /**
    * 生命周期函数--监听页面加载
    */
