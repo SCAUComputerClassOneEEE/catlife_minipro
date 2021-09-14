@@ -1,0 +1,213 @@
+<!--pages/dailyRecord/oneCat/oneCat.wxml-->
+<!--每只猫单独的每日记录页面-->
+
+<!--我的每只猫卡片-->
+<view class="top">
+  <image class="top-picture" src="../../pictures/americanShor.jpg"></image>
+  <text class="top-text">小胖</text>
+</view>
+
+
+<!--每日记录栏-->
+<view class="notes">
+  <van-cell title="猫咪每日记录" icon="notes-o" />
+</view>
+
+
+<!--每日记录具体部分-->
+<!--从这里开始是用vant组件写的每日记录部分-->
+<view class="cat-daily">
+<van-collapse value="{{ activeNames }}" bind:change="onChange" inset>
+  <!--从这里开始猫咪成长部分-->
+  <van-collapse-item title="猫咪成长" name="1" icon="certificate" >
+
+    <view class="innerPart"> <!--设置innerPart样式是为了调整卡片中的整个内部部分居中-->
+    <van-cell-group>
+    <view class="myInput">
+      <view class="input-left">身长(cm)</view>
+      <view class="input-right">
+        <van-field
+          value="{{ value }}"   
+          placeholder="请输入身长数据"
+          border="{{ false }}"
+          bind:change="onChangeField"
+        />
+      </view>
+    </view>
+
+
+
+  <view class="myStepper">
+    <view class="myText">体重 (kg)</view>
+    <view class="stepper-part">
+      <van-stepper value="{{ 1 }}" bind:change="onChangeStepper" label="体重" step="0.1"/>
+    </view> 
+  </view>
+
+  <van-radio-group
+  value="{{ radio }}"
+  bind:change="onChangeRadio"
+  direction="horizontal"
+>
+
+
+  <view class="moya">
+    <view class="myText">是否磨牙</view>
+    <view class="myRadio">
+    <van-radio name="1">是</van-radio>
+    <van-radio name="2">否</van-radio>
+  </view>
+  </view>
+
+  <view class="another">
+      <view class="input-left">其他记录</view>
+      <view class="input-right">
+        <van-field
+          value="{{ value }}"   
+          placeholder="猫咪其他成长记录..."
+          border="{{ false }}"
+          bind:change="onChangeField"
+        />
+      </view>
+    </view>
+
+  <!--按钮-->
+  <view class="mybutton">
+    <van-button type="default" size="small">确定</van-button>
+  </view>
+</van-radio-group>
+
+</van-cell-group>
+</view>
+  </van-collapse-item>
+
+
+  <!--从这里开始猫咪饮食部分-->
+  <van-collapse-item title="猫咪饮食" name="2" icon="certificate" 
+  color="green">
+
+  
+    <view class="innerPart"> <!--设置innerPart样式是为了调整卡片中的整个内部部分居中-->
+    <van-cell-group>
+    <view class="myInput">
+      <view class="input-left">猫粮 (g)</view>
+      <view class="input-right">
+        <van-field
+          value="{{ value }}"   
+          placeholder="请输入猫咪摄入猫粮重量"
+          border="{{ false }}"
+          bind:change="onChangeField"
+        />
+      </view>
+    </view>
+
+
+
+  <view class="myStepper">
+    <view class="myText">罐头 (罐)</view>
+    <view class="stepper-part">
+      <van-stepper value="{{ 0 }}" bind:change="onChangeStepper" label="体重" step="0.1"/>
+    </view> 
+  </view>
+
+  <van-radio-group
+  value="{{ radio }}"
+  bind:change="onChangeRadio"
+  direction="horizontal"
+>
+
+<view class="myStepper">
+    <view class="myText">猫粮 (勺)</view>
+    <view class="stepper-part">
+      <van-stepper value="{{ 0 }}" bind:change="onChangeStepper" label="体重" step="0.1"/>
+    </view> 
+  </view>
+
+  <view class="myStepper">
+    <view class="myText">牛奶 (瓶)</view>
+    <view class="stepper-part">
+      <van-stepper value="{{ 0 }}" bind:change="onChangeStepper" label="体重" step="0.1"/>
+    </view> 
+  </view>
+
+
+  <view class="another">
+      <view class="input-left">其他记录</view>
+      <view class="input-right">
+        <van-field
+          value="{{ value }}"   
+          placeholder="猫咪其他饮食记录..."
+          border="{{ false }}"
+          bind:change="onChangeField"
+        />
+      </view>
+    </view>
+
+  <!--按钮-->
+  <view class="mybutton">
+    <van-button type="default" size="small">确定</van-button>
+  </view>
+</van-radio-group>
+
+</van-cell-group>
+</view>
+    
+  </van-collapse-item>
+
+
+  <!--从这里开始猫咪卫生部分-->
+  <van-collapse-item title="猫咪卫生" name="3" icon="certificate">
+    
+    <view class="innerPart"> <!--设置innerPart样式是为了调整卡片中的整个内部部分居中-->
+    <van-cell-group>
+
+  <van-radio-group
+  value="{{ radio }}"
+  bind:change="onChangeRadio"
+  direction="horizontal"
+>
+
+
+  <view class="moya">
+    <view class="myText">是否洗澡</view>
+    <view class="myRadio"> 
+    <van-radio name="1">是</van-radio>
+    <van-radio name="2">否</van-radio>
+  </view>
+  </view>
+
+  <view class="moya">
+    <view class="myText">是否驱虫</view>
+    <view class="myRadio"> 
+    <van-radio name="1">是</van-radio>
+    <van-radio name="2">否</van-radio>
+  </view>
+  </view>
+
+  <view class="another">
+      <view class="input-left">其他记录</view>
+      <view class="input-right">
+        <van-field
+          value="{{ value }}"   
+          placeholder="猫咪其他卫生记录..."
+          border="{{ false }}"
+          bind:change="onChangeField"
+        />
+      </view>
+    </view>
+
+  <!--按钮-->
+  <view class="mybutton">
+    <van-button type="default" size="small">确定</van-button>
+  </view>
+</van-radio-group>
+
+</van-cell-group>
+</view>
+
+  </van-collapse-item>
+</van-collapse> 
+</view>
+
+
+

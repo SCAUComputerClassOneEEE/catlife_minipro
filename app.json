@@ -15,7 +15,8 @@
     "pages/postDetail/postDetail",
     "pages/catIntroduce/intro1/intro1",
     "pages/myPage/myFan/myFan",
-    "pages/myPage/myFollow/myFollow"
+    "pages/myPage/myFollow/myFollow",
+    "pages/dailyRecord/oneCat/oneCat"
   ],
   "window": {
     "backgroundTextStyle": "light",

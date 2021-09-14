@@ -1,0 +1,128 @@
+/* pages/dailyRecord/oneCat/oneCat.wxss */
+
+
+page {
+  background: #f7f7f7;
+}
+
+.top{
+  height:80px;
+  width:290px;
+  background-color: rgb(255, 255, 255);
+  margin-left: 35rpx;
+  margin-right:35rpx;
+  margin-top:30rpx;
+  border-radius: 7px;
+  box-shadow: rgb(177, 175, 175) 1px 1px 2px;
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+}
+
+/*猫咪图片*/
+.top-picture{
+  border-radius:50%;
+  border-color: rgb(90, 90, 90);
+  height:55px;
+  width: 55px;
+  margin-left: 23px;
+  box-shadow:0 5px 6px rgb(185, 185, 185);            /*设置图片阴影*/
+}
+
+
+/*猫咪名字*/
+.top-text{
+  font-size: 15px;
+  color:rgb(110, 110, 110);
+  margin-left: 30px;
+}
+
+/*画箭头*/
+.arrow{
+  width:10px;
+  height:10px;
+  border-top:1px solid #999;
+  border-right:1px solid #999;
+  transform: rotate(45deg);
+  margin-left: 120px;
+  margin-top:8px;
+}
+
+/**/
+.myinjust{
+  color:rgb(255, 255, 255);
+  transform: rotate(135deg);
+}
+
+
+
+
+/*每日记录栏的整体样式*/
+.notes{
+  margin-top: 20px;
+}
+
+
+
+
+/*猫咪成长模块*/
+.innerPart{
+  align-items: center;
+  width: 300px;
+}
+
+.myInput{
+  display: flex;
+  flex-direction: row;
+}
+
+.input-left{
+  color:rgb(82, 82, 82);
+  font-size:15px;
+  margin-left: 17px;
+  margin-top: 11px;
+}
+
+.myStepper{
+  display: flex;
+  flex-direction: row;
+  margin-top:20px;
+}
+
+.myText{
+  font-size:15px;
+  color:rgb(82, 82, 82);
+  margin-left: 17px;
+}
+
+.stepper-part{
+  margin-left: 30px;
+}
+
+.moya{
+  display: flex;
+  flex-direction: row;
+  margin-top: 20px;
+}
+
+.myRadio{
+  display: flex;
+  flex-direction: row;
+  margin-left: 30px;
+}
+
+.mybutton{
+  margin-top:17px;
+  margin-left: 40px;
+}
+
+
+.another{
+  display: flex;
+  flex-direction: row;
+  margin-top: 13px;
+}
+
+.cat-daily{
+  margin-top: 5px;
+}

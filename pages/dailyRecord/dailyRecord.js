@@ -79,6 +79,13 @@ Page({
     
   },
 
+  gotoCatDetail(event){
+    wx.navigateTo({
+      url: "../dailyRecord/oneCat/oneCat"
+    })
+  },
+
+
   /**
    * 生命周期函数--监听页面加载
    */
@@ -154,6 +161,12 @@ Page({
       })
     },
 
+    gotoMycat(event){
+      wx.navigateTo({
+        url: "../myCat/myCat"
+      })
+    },
+
 
     //我的猫咪框架代码       2021/7/17 这是啥？？
     showModal(e) {
@@ -182,9 +195,3 @@ Page({
   })
   
   
-    
-
-  
-
-
-
