@@ -47,7 +47,7 @@
 
 
 .check-all{
-  margin-left: 125px;
+  margin-left: 25px;
   width: 20px;
   height: 20px;
 }
@@ -70,13 +70,22 @@
   margin-top: 1.5px;
 }
 
+/*用户名*/
+.big-follow-text{
+  width: 160px;
+}
+
 .follow-text{
   font:6px;
   margin-top: 24px;
   margin-block-end: 24px;
   margin-left: 25px;
-}
+ 
+} 
 
+.big-follow-img{
+  width:70px;
+}
 
 .follow-img{
   width: 41px;

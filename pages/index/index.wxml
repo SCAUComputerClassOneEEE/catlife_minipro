@@ -105,7 +105,6 @@
 
 
 
-
 <!--宫格列表-->
 
 <view class='user-box' style="margin-top:20rpx;">
@@ -117,3 +116,7 @@
     </view>
 </view>
 
+
+<view class="divider">
+  <van-divider contentPosition="center">已经到底啦</van-divider>
+</view>

@@ -1,2 +1,33 @@
 <!--pages/myCat/myCat.wxml-->
-<text>我的猫页面</text>
+
+
+
+<!--记录部分-->
+<!--标题-->
+<view class='cat-record-bar'>
+<view class="cu-bar bg-white">
+  <view class="action">
+    <text class="cuIcon-title text-green"></text>
+    <text>我的所有猫咪</text>
+  </view>
+</view>
+</view>
+
+
+<!--我的每只猫卡片:用数组渲染-->
+<block wx:for="{{array}}" wx:for-item="item" wx:for-index="idx"> 
+<view class="big-top">
+	<view class="top" catchtap="gotoCatDetail">
+  <image class="top-picture" src="{{item.img}}"></image>
+  <text class="top-text">{{item.name}}</text>
+
+<view class="big-arrow">
+  <view class="arrow">
+        <view class='myinjust'></view>       
+    </view>
+</view>    
+</view>
+
+</view>
+
+</block>

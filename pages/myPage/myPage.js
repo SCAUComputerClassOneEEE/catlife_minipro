@@ -25,13 +25,13 @@ Page({
 
   gotoDetailMyCat(event){
     wx.navigateTo({
-      url: "/pages/custOpinions/custOpinions"
+      url: "/pages/myCat/myCat"
     })
   },
 
   gotoDetailMemorandum(event){
     wx.navigateTo({
-      url: "/pages/custOpinions/custOpinions"
+      url: "/pages/memorandum/memorandum"
     })
   },
 

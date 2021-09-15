@@ -1,11 +1,35 @@
 // pages/myCat/myCat.js
+var app = getApp();
+
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
+    CustomBar: app.globalData.CustomBar,          //猫咪框架代码data
 
+    array: [{  
+      img:"../pictures/americanShor.jpg",
+      name:"大胖ppppppppppp"
+    }, {
+      img:"../pictures/Beautiful-Bombay-Cat-Face.jpg",
+      name:"二胖pppppp"
+    }, {
+      img:"../pictures/tonkinese.jpg",
+      name:"小胖ppppppppp"
+    }],
+    array1:[{
+        img:"../pictures/americanShor.jpg",
+        name:"大胖"
+    }],
+  },
+
+
+  gotoCatDetail(event){
+    wx.navigateTo({
+      url: "../dailyRecord/oneCat/oneCat"
+    })
   },
 
   /**

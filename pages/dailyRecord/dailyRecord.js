@@ -11,13 +11,13 @@ Page({
 
       array: [{  
         img:"../pictures/americanShor.jpg",
-        name:"大胖"
+        name:"大胖ppppppppppp"
       }, {
         img:"../pictures/Beautiful-Bombay-Cat-Face.jpg",
-        name:"二胖"
+        name:"二胖pppppp"
       }, {
         img:"../pictures/tonkinese.jpg",
-        name:"小胖"
+        name:"小胖ppppppppp"
       }],
       array1:[{
           img:"../pictures/americanShor.jpg",
@@ -115,12 +115,6 @@ Page({
     },
 
 
-    //我的猫咪框架代码       2021/7/17 这是啥？？
-    showModal(e) {
-      this.setData({
-        modalName: e.currentTarget.dataset.target
-      })
-    },
     hideModal(e) {
       this.setData({
         modalName: null
