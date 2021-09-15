@@ -5,6 +5,13 @@ Page({
    * 页面的初始数据
    */
   data: {
+    userName:"拔丝芋头真好吃",          //用户名
+    headPortrait:"../pictures/3.png",      //头像
+    postTime:"2019年12月3日",          //发布时间
+    content:"动态内容..........",           //动态内容
+    img:"../pictures/7.png",               //动态图片
+    likeNumber:"2",         //点赞数
+    commentNumber:"3"      //评论数
 
   },
 

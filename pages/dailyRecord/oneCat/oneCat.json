@@ -11,5 +11,6 @@
     "van-stepper":"../../../dist/stepper/index",
     "van-radio":"../../../dist/radio/index",
     "van-radio-group":"../../../dist/radio-group/index"
-  }
+  },
+  "navigationBarTitleText": "每日记录"
 }

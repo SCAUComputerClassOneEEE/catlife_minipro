@@ -33,34 +33,15 @@
 </view>
 
 
-<!--记录模块-->
-
-<!--我的每只猫卡片-->
-<view class="top" catchtap="gotoCatDetail">
-  <image class="top-picture" src="../pictures/americanShor.jpg"></image>
-  <text class="top-text">小胖</text>
+<!--我的每只猫卡片:用数组渲染-->
+<block wx:for="{{array}}" wx:for-item="item" wx:for-index="idx"> 
+	<view class="top" catchtap="gotoCatDetail">
+  <image class="top-picture" src="{{item.img}}"></image>
+  <text class="top-text">{{item.name}}</text>
   <view class="arrow">
         <view class='myinjust'>
         </view>
     </view>
 </view>
 
-
-<view class="top" catchtap="gotoCatDetail">
-  <image class="top-picture" src="../pictures/americanShor.jpg"></image>
-  <text class="top-text">小胖</text>
-  <view class="arrow">
-        <view class='myinjust'>
-        </view>
-    </view>
-</view>
-
-
-<view class="top" catchtap="gotoCatDetail">
-  <image class="top-picture" src="../pictures/americanShor.jpg"></image>
-  <text class="top-text">小胖</text>
-  <view class="arrow">
-        <view class='myinjust'>
-        </view>
-    </view>
-</view>
+</block>

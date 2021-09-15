@@ -1,2 +1,119 @@
 <!--文章评论页-->
-<text>pages/postDetail/postDetail.wxml</text>
+<!--pages/postDetail/postDetail.wxml-->
+
+<!--9.9：不用写从猫圈页面到动态详情页面的信息传递啦，动态详情页面的信息依旧可以从服务器上获取-->
+
+<!--动态卡片-->
+<view class="cu-card dynamic {{isCard?'no-card':''}}"> 
+  <view class="cu-item shadow">
+    <view class="cu-list menu-avatar">
+      <view class="cu-item">
+        <view class="cu-avatar round lg" style="background-image:url({{headPortrait}});"></view>    
+        <view class="content flex-sub">
+          <text>{{userName}}</text> 
+          <view class="text-gray text-sm flex justify-between">
+            {{postTime}}
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class="text-content">
+      {{content}}
+    </view>
+    <view class="grid flex-sub padding-lr {{isCard?'col-3 grid-square':'col-1'}}">
+      <view class="bg-img {{isCard?'':'only-img'}}" style="background-image:url({{img}});" wx:for="{{isCard?9:1}}" wx:key="{{index}}">
+      </view>
+    </view>
+    <view class="text-gray text-sm text-right padding">
+      
+      <text class="cuIcon-appreciatefill margin-lr-xs"></text>  <text>{{likeNumber}}</text>
+      <text class="cuIcon-messagefill margin-lr-xs"></text>   <text>{{commentNumber}}</text>
+    </view>
+
+  </view>
+</view>
+	
+
+<text class="comment-top-text">总{{commentNumber}}条评论</text>
+
+
+<!--评论部分-->
+<view class="comment-all">
+<view class="cu-card dynamic {{isCard?'no-card':''}}"> 
+  <view class="cu-item shadow">
+    <view class="cu-list menu-avatar">
+      <view class="cu-item">
+        <view class="cu-avatar round lg" style="background-image:url({{headPortrait}});"></view>    
+        <view class="content flex-sub">
+          <text>{{userName}}</text> 
+          <view class="text-gray text-sm flex justify-between">
+            {{postTime}}
+          </view>
+        </view>
+      </view>
+    </view>
+    
+    <view class="comment">
+    <text class="comment-text">内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容</text> 
+  </view>
+  </view>
+</view>
+
+	
+
+
+<view class="cu-card dynamic {{isCard?'no-card':''}}"> 
+  <view class="cu-item shadow">
+    <view class="cu-list menu-avatar">
+      <view class="cu-item">
+        <view class="cu-avatar round lg" style="background-image:url({{headPortrait}});"></view>    
+        <view class="content flex-sub">
+          <text>{{userName}}</text> 
+          <view class="text-gray text-sm flex justify-between">
+            {{postTime}}
+          </view>
+        </view>
+      </view>
+    </view>
+    
+    <view class="comment">
+    <text class="comment-text">内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容</text> 
+  </view>
+  </view>
+</view>
+
+
+
+<view class="cu-card dynamic {{isCard?'no-card':''}}"> 
+  <view class="cu-item shadow">
+    <view class="cu-list menu-avatar">
+      <view class="cu-item">
+        <view class="cu-avatar round lg" style="background-image:url({{headPortrait}});"></view>    
+        <view class="content flex-sub">
+          <text>{{userName}}</text> 
+          <view class="text-gray text-sm flex justify-between">
+            {{postTime}}
+          </view>
+        </view>
+      </view>
+    </view>
+    
+    <view class="comment">
+    <text class="comment-text">内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容</text> 
+  </view>
+  </view>
+</view>
+
+</view>
+
+
+
+<!--发送自己的评论框-->
+<view class="cu-bar foot input {{InputBottom!=0?'cur':''}}" style="bottom:{{InputBottom}}px">
+  <input class="solid-bottom" bindfocus="InputFocus" bindblur="InputBlur" adjust-position="{{false}}" focus="{{false}}" maxlength="300" cursor-spacing="10"></input>
+  <view class="action">
+    <text class="cuIcon-emojifill text-grey"></text>
+  </view>
+  <button class="cu-btn bg-green shadow">发送</button>
+</view>
+

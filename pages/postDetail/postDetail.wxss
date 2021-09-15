@@ -1,1 +1,31 @@
 /* pages/postDetail/postDetail.wxss */
+
+.comment-top-text{
+  font-size: 10px;
+  margin-left: 13px;
+  color:rgb(51, 51, 51);
+}
+
+.comment-text{
+ 
+  color: rgb(124, 124, 124);
+  font-size:13px;
+}
+
+.comment{
+  margin-block-end: 25px;
+  width:80%;
+  margin-left: 30px;
+  align-items: center;
+  
+}
+
+.comment-all{
+  margin-block-end: 100px;
+}
+
+.cu-btn{
+  width:20px;
+  color:rgb(235, 238, 241);
+  padding:15px 10px;
+}
