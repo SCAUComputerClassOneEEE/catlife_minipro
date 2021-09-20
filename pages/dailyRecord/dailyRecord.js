@@ -1,6 +1,6 @@
 // pages/dailyRecord/dailyRecord.js
 const app = getApp();
-
+const tabChange = require('../../utils/tabChange.js');
 Page({
 
   /**
@@ -32,6 +32,9 @@ Page({
     })
   },
 
+  onTabItemTap(item) {
+    tabChange.bindTabChange(item);
+  },
 
   /**
    * 生命周期函数--监听页面加载

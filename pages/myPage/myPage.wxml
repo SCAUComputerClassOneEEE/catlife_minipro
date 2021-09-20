@@ -5,11 +5,11 @@
 <view class="myinfo"> 
   <view class="center_img">
       <open-data type="userAvatarUrl" class="uers_head"></open-data>
-        </view>
-          <view class="center_info">
-            <open-data type="userNickName" class="center_name"></open-data>
-              <view class="center_name">{{trueName}}</view>    
-      </view>
+  </view>
+  <view class="center_info">
+    <open-data type="userNickName" class="center_name"></open-data>
+    <view class="center_name">{{trueName}}</view>    
+   </view>
 </view>
 
 

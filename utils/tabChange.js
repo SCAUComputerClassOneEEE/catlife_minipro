@@ -64,6 +64,7 @@ function onLogin() {
 }
 
 function serverSessionRenew(sendData) {
+  console.log(sendData);
   wx.request({
     // 发送用户信息给后端更新，顺便刷新redis session
     url: app.globalData.serverDomain + '/self/login',
