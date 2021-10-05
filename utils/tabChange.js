@@ -3,8 +3,15 @@ module.exports = {
 }
 var app = getApp();
 
+var serverLogining = false;
+
 function bindTabChange(item) {
+  if (serverLogining) {
+    return;
+  }
   // 当index不为0时，弹出登录申请。
+  serverLogining = true;
+
   if (item.index !== 0) {
     wx.checkSession({
       success: (res) => {
@@ -17,14 +24,19 @@ function bindTabChange(item) {
           content: '会话过期，请重新授权',
           success: res => {
             if (res.confirm) {
+              // 选择确认
               onLogin();
             } else if (res.cancel) {
+              // 选择取消
               wx.reLaunch({ // 跳转回index
                 url: '/pages/index/index'
               })
             }
           }
         })
+      },
+      complete: function() {
+        serverLogining = false;
       }
     })
   }
@@ -42,9 +54,12 @@ function onLogin() {
         wx.getUserInfo({
           success: function(resUserInfo) {
             // 得到用户的信息
-            sendData['userInfo'] = resUserInfo.userInfo;
+            sendData['encryptedData'] = resUserInfo.encryptedData;
             wx.setStorageSync('userInfo', resUserInfo.userInfo)
             sendData['code'] = res.code;
+            sendData['iv'] = resUserInfo.iv;
+            var reqSucessOrNot = true;
+            wx.showLoading()
             wx.request({
               // 发送用户信息给后端更新，顺便刷新redis session
               url: app.globalData.serverDomain + '/self/login',
@@ -53,7 +68,27 @@ function onLogin() {
                 // res 为返回的数据
               },
               fail: function (res) {
-          
+                reqSucessOrNot = false;
+              },
+              complete: function(res) {
+                wx.hideLoading();
+                if (reqSucessOrNot && res.status !== 0) {
+                  wx.showToast({ title: '系统错误' });
+                }
+                if (!reqSucessOrNot) {
+                  wx.showToast({
+                      title: '服务掉线' ,
+                      duration: 2000,
+                      success: function() {
+                        setTimeout(function () {
+                          //要延时执行的代码
+                          wx.reLaunch({ // 跳转回index
+                            url: '/pages/index/index'
+                          })
+                        }, 2000) //延迟时间
+                      }
+                  });
+                }
               }
             })
           },
@@ -65,7 +100,9 @@ function onLogin() {
     },
 
     fail: function(res) {
-
+      wx.reLaunch({ // 跳转回index
+        url: '/pages/index/index'
+      })
     }
   })
 }
