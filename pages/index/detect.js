@@ -5,7 +5,7 @@ module.exports = {
   stopDetectInterval
 }
 
-var detectInterVal;
+var detectInterVal = undefined;
 var isDetecting = false;
 var tryClass = "";
 var tryDetect = 0;
@@ -36,7 +36,7 @@ function detect(data) {
         detectInterVal = setInterval(
           function(){
             var stopOrNot = false;
-            
+
             if (tryDetect > 9) {
               stopOrNot = true;
             }
