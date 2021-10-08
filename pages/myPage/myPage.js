@@ -1,4 +1,5 @@
 // pages/myPage/myPage.js
+const tabChange = require('../../utils/tabChange.js');
 Page({
 
   /**
@@ -8,6 +9,9 @@ Page({
 
   },
 
+  onTabItemTap(item) {
+    tabChange.bindTabChange(item);
+  },
 
 
   /*具体页面跳转*/ 
