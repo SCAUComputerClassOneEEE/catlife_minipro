@@ -5,3 +5,12 @@ page{
   background: #f7f7f5;
 }
 
+.submit-button{
+  margin-top: 15px;
+  align-items: center;
+}
+
+.myButton{
+  align-items: center;
+  margin-left: 60px;
+}

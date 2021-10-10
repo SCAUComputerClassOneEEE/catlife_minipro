@@ -233,3 +233,23 @@ checkbox .wx-checkbox-input.wx-checkbox-input-checked::before {
   color:rgb(255, 255, 255);
   transform: rotate(135deg);
 }
+
+
+
+/*为猫咪建档弹框的 取消按钮 样式*/
+.recordModel-left{               
+  width:20rpx;
+}
+
+
+/*为猫咪建档弹框的 取消按钮 样式*/
+.recordModel-right{      
+  width:20rpx;
+}
+
+
+/*为猫咪建档弹框的 出生日期部分 样式*/
+.cat-birth{
+  margin-top: 30rpx;
+}
+

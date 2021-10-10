@@ -1,1 +1,11 @@
-<!--pages/custOpinions/custOpinions.wxml-->
+<!--用户意见反馈-->
+
+<form bindsubmit="formSubmit">
+<view class="cu-form-group margin-top">
+		<input  placeholder="请向我们提出您宝贵的意见~"></input>
+	</view>
+
+<view class="myButton">
+  <button form-type="submit" class="cu-btn bg-blue submit-button">提交</button>
+</view>
+</form>

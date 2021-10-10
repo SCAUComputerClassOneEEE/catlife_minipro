@@ -12,20 +12,49 @@
   border-radius:50%;
   height:90px;
   width: 90px;
-  margin-left: 60px;
+  margin-left: 90px;
+  box-shadow:0 5px 20px rgb(201, 195, 186);            /*设置图片阴影*/
 }
 
-.top-rate{
+.top-text{
+  display: flex;
+  flex-direction:column;
+}
+
+.top-rate1{
+  margin-left: 10px;
+  margin-top:10px;
+  font-size: 25px;
+  font-weight: bold;
+  color:rgb(16, 136, 16);
+  text-decoration:underline;
+}
+
+.top-rate2{
   margin-left: 30px;
-  margin-top:30px;
+  margin-top:10px;
+  font-size: 15px;
+  
+  color:rgb(26, 27, 26);
+}
+
+
+.top-rate3{
+  margin-left: 50px;
+  margin-top:10px;
+  font-size: 18px;
+  font-weight: bold;
+  color:rgb(245, 200, 0);
+  text-decoration:underline;
 }
 
 /*分界线样式*/
 .middle-header-line{
   background: #e0e3da;
   width: 100%;
-  height: 2rpx;
-  margin-top: 20px;
+  height: 3rpx;
+  margin-top: 23px;
+
 }
 
 
@@ -34,10 +63,76 @@
   display: flex;
   flex-direction: row;
   margin-left: 30px;
+  margin-top: 4rpx;
 }
 
-.iden-dowm-archives{
+
+.iden-dowm-archives{    /*为猫咪建档 按钮样式*/
   height:30px;
-  width: 80px;
-  margin-left: 40px;
+  width: 30px;
+  margin-left: 90px;
+  background-color: rgb(243, 239, 239);
+  font-size:31rpx;                /*设置 “为猫咪建档” 字体大小*/
+  font-family:"Microsoft YaHei";
+  color:rgb(167, 124, 124);
+  box-shadow:0 2px 2px rgb(179, 179, 179);
+}
+
+.iden-dowm-archives::before{    /*为猫咪建档按钮 点击效果*/
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(37, 37, 37);
+  border: inherit;
+  border-color: rgb(51, 51, 51);
+  border-radius: inherit;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  content: ' ';
+}
+
+.iden-dowm-archives:active::before{   /*为猫咪建档按钮 点击效果*/
+  opacity: 0.1;
+}
+
+
+/*为猫咪建档弹框的 取消按钮 样式*/
+.recordModel-left{               
+  width:20rpx;
+}
+
+
+/*为猫咪建档弹框的 取消按钮 样式*/
+.recordModel-right{      
+  width:20rpx;
+}
+
+
+/*为猫咪建档弹框的 出生日期部分 样式*/
+.cat-birth{
+  margin-top: 30rpx;
+}
+
+
+/*猫咪信息部分*/
+.catInfo{
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-top: 10%;
+  
+}
+
+
+
+.catInden-down{
+  width:250px;
+  margin-top: 80rpx;
+  margin-left: 10%;
+  margin-right: 10%;
+  align-items: center;
+  font-size: 35rpx;
+  background-color: rgb(247, 242, 236);
+  border-radius: 10%;
 }

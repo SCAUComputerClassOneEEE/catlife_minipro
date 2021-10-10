@@ -5,10 +5,11 @@
   <!--顶部：包括识别率和猫咪头像两部分-->
   <view class="iden-top">
     <!--识别率部分-->
-    
+    <view class="top-text">
     <text class="top-rate1">{{RecognitionRate}}</text>
     <text class="top-rate2">为</text>
     <text class="top-rate3">{{CatType}}</text>
+   </view>
     <!--猫咪头像部分-->
     <image class="top-picture" src="../pictures/lihua.jfif"></image>
   </view>
@@ -21,7 +22,105 @@
   <!--底部：包括猫咪种类信息和猫咪建档按钮-->
   <view class="iden-down">
     <view class="iden-down-ifor">此处为信息部分</view>
-    <button type="default" class="iden-dowm-archives" >为猫咪建档</button> 
+    <button class="iden-dowm-archives button-hover" bindtap="showModal" data-target="DialogModal1">为猫咪建档</button> 
   </view>
   
+  <view class="cu-modal {{modalName=='DialogModal1'?'show':''}}">
+  <view class="cu-dialog">
+    <view class="cu-bar bg-white justify-end">
+      <view class="content">为猫咪建档</view>
+      <view class="action" bindtap="hideModal">
+        <text class="cuIcon-close text-red"></text>
+      </view>
+    </view>
+    <view class="padding-xl">
+
+    <!--猫咪照片-->
+    <view class="cu-bar bg-white margin-top">
+		<view class="action">
+			上传猫咪照片
+		</view>
+		<view class="action">
+			{{imgList.length}}/1
+		</view>
+	</view>
+	<view class="cu-form-group">
+		<view class="grid col-4 grid-square flex-sub">
+			<view class="bg-img" wx:for="{{imgList}}" wx:key="{{index}}" bindtap="ViewImage" data-url="{{imgList[index]}}">
+				<image src='{{imgList[index]}}' mode='aspectFill'></image>
+				<view class="cu-tag bg-red" catchtap="DelImg" data-index="{{index}}">
+					<text class="cuIcon-close"></text>
+				</view>
+			</view>
+			<view class="solids" bindtap="ChooseImage" wx:if="{{imgList.length<4}}">
+				<text class="cuIcon-cameraadd"></text>
+			</view>
+		</view>
+	</view>
+
+    <!--猫咪名字-->
+      <view class="cu-form-group margin-top">
+		<view class="title">猫咪名字</view>
+		<input placeholder="猫咪名字"></input>
+	</view>
+
+  <!--猫咪性别-->
+  <view class="cu-form-group margin-top">
+		<view class="title">猫咪性别</view>
+		<picker bindchange="PickerChange" value="{{index}}" range="{{picker}}">
+			<view class="picker">
+				{{index?picker[index]:'选择'}}
+			</view>
+		</picker>
+	</view>
+
+  <!--猫咪品种-->
+  <view class="cu-form-group margin-top">
+		<view class="title">猫咪品种</view>
+		<picker bindchange="PickerChange" value="{{index}}" range="{{picker}}">
+			<view class="picker">
+				{{index?picker[index]:'选择'}}
+			</view>
+		</picker>
+	</view>
+
+   <!--是否绝育-->
+   <view class="cu-form-group margin-top">
+		<view class="title">是否绝育</view>
+		<picker bindchange="PickerChange" value="{{index}}" range="{{picker}}">
+			<view class="picker">
+				{{index?picker[index]:'选择'}}
+			</view>
+		</picker>
+	</view>
+
+  <!--猫咪出生日期-->
+  <view class="cu-form-group cat-birth">
+		<view class="title">出生日期</view>
+		<picker mode="date" value="{{date}}" start="2015-09-01" end="2020-09-01" bindchange="DateChange">
+			<view class="picker">
+				{{date}}
+			</view>
+		</picker>
+	</view>
+
+
+
+    </view>
+    <view class="cu-bar bg-white justify-end">
+      <view class="action">
+        <button class="cu-btn line-green text-green recordModel-left" bindtap="hideModal">取消</button>
+        <button class="cu-btn bg-green margin-left recordModel-right" bindtap="hideModal">确定</button>
+
+      </view>
+    </view>
+  </view>
+</view>
+</view>
+
+
+
+<!--猫咪文本信息-->
+<view class="catInden-down">
+<view class="catInfo">  狸花猫头部非常圆，面颊非常宽大，两只耳朵的间距相比较远，耳朵的大小十分合适，具有宽大的耳根，深厚的耳郭，而且位于尖端的部分比较圆滑。眼睛大而有神，圆杏核的形状，人们目前认可从黄色、金色到绿色不等的过渡颜色。一般情况下是眼睛会有眼线出现。鼻子长有鼻线，呈现砖红色的。狸花猫身材适中，胸腔比较宽阔。四肢同尾巴一样，都是长度适中的，比例协调，具有较大的力气，肌肉发达。</view>
 </view>
