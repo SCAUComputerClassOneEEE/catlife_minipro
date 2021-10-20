@@ -19,7 +19,7 @@ function detect(data) {
     return;
   }
   init();
-  const upImagePath = data.path;
+  const upImagePath = data;
   isDetecting = true;
   wx.uploadFile({
     filePath: upImagePath,
