@@ -16,6 +16,7 @@ function bindTabChange(item) {
     wx.checkSession({
       success: (res) => {
         // 登录会话中
+        
       },
       fail: function () {
         // 非登录会话中
@@ -59,12 +60,15 @@ function onLogin() {
             sendData['code'] = res.code;
             sendData['iv'] = resUserInfo.iv;
             wx.showLoading({
-              title: '登陆中'
+              title: '登陆中',
+              mask: true // 禁止活动
             })
+            /*****个人服务器******/
             wx.request({
               // 发送用户信息给后端更新，顺便刷新redis session
               url: app.globalData.serverDomain + '/self/login',
               data: sendData,
+
               success: function(res) {
                 // res 为返回的数据
                 if (res.status === 0) {
@@ -73,10 +77,12 @@ function onLogin() {
                   wx.showToast({ title: '系统错误' });
                 }
               },
+
               fail: function () {
+                
                 wx.showToast({
                   title: '服务掉线' ,
-                  duration: 2000,
+                  duration: 1000,
                   success: function() {
                     setTimeout(function () {
                       //要延时执行的代码
@@ -87,10 +93,13 @@ function onLogin() {
                   }
               });
               },
+
               complete: function() {
                 wx.hideLoading();
               }
+
             })
+            /***********/
           },
           fail: function() {
             return;

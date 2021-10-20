@@ -62,14 +62,14 @@ function detect(data) {
     fail: function() {
       wx.showToast({
         title: '服务掉线' ,
-        duration: 2000,
+        duration: 1000,
         success: function() {
           setTimeout(function () {
             //要延时执行的代码
             wx.reLaunch({ // 跳转回index
               url: '/pages/index/index'
             })
-          }, 2000) //延迟时间
+          }, 1000) //延迟时间
         }
       });
     },
