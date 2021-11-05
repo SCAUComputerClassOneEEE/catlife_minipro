@@ -56,9 +56,8 @@ function onLogin() {
           success: function(resUserInfo) {
             // 得到用户的信息
             app.userInfo = resUserInfo.userInfo;
-            sendData['encryptedData'] = resUserInfo.encryptedData;
             sendData['code'] = res.code;
-            sendData['iv'] = resUserInfo.iv;
+            console.log(sendData);
             wx.showLoading({
               title: '登陆中',
               mask: true // 禁止活动
@@ -68,11 +67,14 @@ function onLogin() {
               // 发送用户信息给后端更新，顺便刷新redis session
               url: app.globalData.serverDomain + '/self/login',
               data: sendData,
+              method: "POST",
 
               success: function(res) {
                 // res 为返回的数据
-                if (res.status === 0) {
-                  wx.setStorageSync('catOwner', res.data);
+                let data = res.data;
+                console.log(res.data);
+                if (data.status === 0) {
+                  wx.setStorageSync('catOwner', data.data);
                 } else {
                   wx.showToast({ title: '系统错误' });
                 }

@@ -23,7 +23,7 @@ App({
   },
   globalData: {
     userInfo: null,
-    serverDomain: 'https://scaucatlife.xyz:8567',
+    serverDomain: 'https://scaucatlife.xyz:8657',
     topHotClasses: null
   }
 })
