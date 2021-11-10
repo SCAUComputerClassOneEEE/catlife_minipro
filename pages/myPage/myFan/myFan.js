@@ -1,4 +1,5 @@
 // pages/myPage/myFan/myFan.js
+const myPageApi = require('../myPageApi.js');
 Page({
 
   /**
@@ -7,6 +8,12 @@ Page({
   data: {
     headPortrait:"../../pictures/3.png",      //头像
     userName:"拔丝芋头真好吃"        //用户名
+  },
+
+  getFan() {
+    
+    
+    myPageApi.getFan(1);
   },
 
   /**
