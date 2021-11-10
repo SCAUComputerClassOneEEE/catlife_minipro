@@ -81,7 +81,6 @@ function onLogin() {
               },
 
               fail: function () {
-                
                 wx.showToast({
                   title: '服务掉线' ,
                   duration: 1000,
@@ -93,7 +92,7 @@ function onLogin() {
                       })
                     }, 2000) //延迟时间
                   }
-              });
+                });
               },
 
               complete: function() {
