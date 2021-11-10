@@ -1,11 +1,12 @@
-<!--pages/memorandum/memorandum.wxml-->
+<!--备忘录页面-->
 
-<view class = "container">
+<!--
+  -<view class = "container">
   <view class = "today">
     <text>{{Today}}</text>
   </view>
 </view>
-
+-->
 
 <view class = "additem">
    <view class = "add">

@@ -16,6 +16,7 @@ Page({
     CatBreedID:0,
     sterilization:['是','否'],
     sterilizationID:0,
+    allValue:'',
 
 
       array: [{  
@@ -58,6 +59,7 @@ Page({
       sterilizationID:e.detail.value         //把当前的触摸的索引给catSexID  （？？有点没理解
     })
   },
+
 
   //显示和隐藏为猫咪建档页面
   showModal(e) {
@@ -119,6 +121,14 @@ Page({
           })
         }
       }
+    })
+  },
+
+  //表单提交按钮
+  formSubmit:function(e){
+    console.log('form发生了submit 事件，携带数据为：',e.detail.value)
+    this.setData({
+      allValue:e.detail.value
     })
   },
  

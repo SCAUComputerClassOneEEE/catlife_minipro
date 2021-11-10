@@ -6,17 +6,18 @@ page {
   background: #f7f7f7;
 }
 
+/*猫咪名字和头像栏*/
 .top{
-  height:90px;
-  width:290px;
+  height:80px;
+  width:90%;
   background-color: rgb(255, 255, 255);
-  margin-left: 35rpx;
-  margin-right:35rpx;
-  margin-top:20rpx;
+ display: flex;
+  margin-top:30rpx;
+  margin-left: 5%;
+  margin-right: 5%;
   border-radius: 7px;
   box-shadow: rgb(177, 175, 175) 1px 1px 2px;
   align-items: center;
-  display: flex;
   flex-direction: row;
 }
 
@@ -50,33 +51,35 @@ page {
 
 
 .midddle-1{
-  height:160px;
-  width:290px;
+  height:150px;
+  width:90%;
   background-color: rgb(255, 255, 255);
-  margin-left: 35rpx;
-  margin-right:35rpx;
+ display: flex;
   margin-top:30rpx;
+  margin-left: 5%;
+  margin-right: 5%;
   border-radius: 7px;
   box-shadow: rgb(177, 175, 175) 1px 1px 2px;
   align-items: center;
-  display: flex;
   flex-direction: column;
 }
+
 
 .midddle-2{
-  height:240px;
-  width:290px;
+  height:205px;
+  width:90%;
   background-color: rgb(255, 255, 255);
-  margin-left: 35rpx;
-  margin-right:35rpx;
+ display: flex;
   margin-top:30rpx;
+  margin-left: 5%;
+  margin-right: 5%;
   border-radius: 7px;
   box-shadow: rgb(177, 175, 175) 1px 1px 2px;
   align-items: center;
-  display: flex;
   flex-direction: column;
 }
 
+/*标题字体样式*/
 .head-text{
   font-size: 15px;
   color:rgb(87, 87, 87);
@@ -85,7 +88,7 @@ page {
   margin-left: 5px;
 }
 
-
+/*正文字体样式*/
 .main-text{
   font-size: 13px;
   color:rgb(145, 145, 145);

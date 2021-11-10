@@ -45,7 +45,8 @@ Page({
       id: 6,
       type: 'image',
       url: '../pictures/tonkinese.jpg'
-    }],
+    }
+  ],
 
 
     //以下是列表宫格代码框架的数组
@@ -68,13 +69,13 @@ Page({
       name: '土耳其猫',
       img:"../pictures/havana.jpg"
     },{
-      name: '孟买猫',
+      name: '异国短毛猫（加菲）',
       img:"../pictures/havana.jpg"
     }, {
-      name: '孟买猫',
+      name: '波斯猫',
       img:"../pictures/havana.jpg"
     }, {
-      name: '孟买猫',
+      name: '布偶猫',
       img:"../pictures/havana.jpg"
     }
     ],
