@@ -1,12 +1,24 @@
 // pages/oneCat/oneCat.js
 Page({
+  
 
   /**
    * 页面的初始数据
    */
   data: {
-
-  },
+    height:"",      //身高
+    weight:"",      //体重
+    molar:"",       //磨牙
+    growAnother:"",
+    catFoodG:"",    //猫粮（g）
+    can:"",         //罐头
+    catFood:"",     //猫粮勺
+    milk:"",      
+    dietAnother:"",
+    bathe:"",       //洗澡
+    insert:"",      //驱虫
+    healthAnother:""
+    },
 
 
 

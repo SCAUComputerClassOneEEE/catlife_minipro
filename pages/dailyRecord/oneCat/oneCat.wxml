@@ -18,7 +18,9 @@
 <!--从这里开始是用vant组件写的每日记录部分-->
 <view class="cat-daily">
 <van-collapse value="{{ activeNames }}" bind:change="onChange" inset>
+
   <!--从这里开始猫咪成长部分-->
+  <form bindsubmit="formSubmit">
   <van-collapse-item title="猫咪成长" name="1" icon="certificate" >
 
     <view class="innerPart"> <!--设置innerPart样式是为了调整卡片中的整个内部部分居中-->
@@ -73,16 +75,18 @@
 
   <!--按钮-->
   <view class="mybutton">
-    <van-button type="default" size="small">确定</van-button>
+    <button class="cu-btn" form-type="submit">确定</button>
   </view>
 </van-radio-group>
 
 </van-cell-group>
 </view>
   </van-collapse-item>
+  </form>
 
 
   <!--从这里开始猫咪饮食部分-->
+  <form bindsubmit="formSubmit">
   <van-collapse-item title="猫咪饮食" name="2" icon="certificate" 
   color="green">
 
@@ -145,7 +149,7 @@
 
   <!--按钮-->
   <view class="mybutton">
-    <van-button type="default" size="small">确定</van-button>
+    <button class="cu-btn" form-type="submit">确定</button>
   </view>
 </van-radio-group>
 
@@ -153,9 +157,10 @@
 </view>
     
   </van-collapse-item>
-
+  </form>
 
   <!--从这里开始猫咪卫生部分-->
+  <form bindsubmit="formSubmit">
   <van-collapse-item title="猫咪卫生" name="3" icon="certificate">
     
     <view class="innerPart"> <!--设置innerPart样式是为了调整卡片中的整个内部部分居中-->
@@ -198,7 +203,7 @@
 
   <!--按钮-->
   <view class="mybutton">
-    <van-button type="default" size="small">确定</van-button>
+    <button class="cu-btn" form-type="submit">确定</button>
   </view>
 </van-radio-group>
 
@@ -206,6 +211,7 @@
 </view>
 
   </van-collapse-item>
+</form>
 </van-collapse> 
 </view>
 

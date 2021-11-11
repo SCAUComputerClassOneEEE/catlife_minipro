@@ -1,5 +1,5 @@
 // pages/myPage/myFan/myFan.js
-const myPageApi = require('../myPageApi.js');
+//const myPageApi = require('../myPageApi.js');
 Page({
 
   /**
